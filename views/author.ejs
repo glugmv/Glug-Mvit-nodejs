@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>GLUG Mvit</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/app.css" rel="stylesheet">
+  <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+</head>
+
+<body>
+  <!--==========================
+  Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div class="logo float-left">
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <h1 class="text-light"><a href="/" class="scrollto"><img src="/img/logo.png" alt="" class="img-fluid"><span>GLUG MVIT</span></a></h1>
+        <a href="#header" class="scrollto"></a>
+      </div>
+
+      <nav class="main-nav float-right d-none d-lg-block">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <% if(!user){ %>
+              <li class="active">
+                    <a href="/login">Login</a>
+              </li>
+              <li>
+                    <a href="/register">Signup</a>
+              </li>
+          <% }else{ %>
+           <!--  <li>
+                  <a class="disabled" href="#">Signed in as <%= user.username %></a>
+            </li> -->
+            <li>
+                  <a href="/logout">Logout</a>
+            </li>
+          <% } %>
+          <!-- <li><a href="../login">Login</a></li>
+          <li><a href="../register">Sign up</a></li> -->
+        </ul>
+      </nav><!-- .main-nav -->
+      <br><br><br>
+        
+    </div>
+
+  </header>
+
+<section id="services" class="section-bg">
+     <div class="container">
+
+       <header class="section-header">
+        <!-- <h3>Authors</h3>-->
+         <p>
+<!--Open to any free software enthusiasts. This community has been always described as place for learning and sharing, a place to evolve and grow together.</p>-->
+       </header>
+       <br>
+       <br>
+
+       <div class="row">
+
+         <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+           <div class="box">
+             <!--<div class="icon" style="background: #FFFFFF;">--><!--<i class="ion-ios-analytics-outline" style="color: #ff689b;"></i>--><img src="/img/abhijeet.png" class = "tent" width = "150px" height="150px"><!--</div>-->
+             <h4 class="title"><a href="https://www.linkedin.com/in/thatniceman/">Abhijeet Singh</a></h4>
+             <p class="description">Neighbourhood friendly Software Engineer. GLUG Lead | Microsoft Student Partner | AI Developer.</p>
+           </div>
+         </div>
+         <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+           <div class="box">
+             <!--<div class="icon" style="background: #FFFFFF;">--><img src="/img/shubh.jpg" class = "tent" width = "150px" height="150px"><!--</div>-->
+             <h4 class="title"><a href="https://www.linkedin.com/in/shubh-saxena-320950166/">Shubh Saxena</a></h4>
+             <p class="description">Web Developer|Learning Flutter|Lover Of Maths</p>
+           </div>
+         </div>
+
+         <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+           <div class="box">
+             <!--<div class="icon" style="background: #FFFFFF;">--><img src="/img/rajat.jpg" class = "tent" width = "150px" height="150px"><!--</div>-->
+             <h4 class="title"><a href="https://www.linkedin.com/in/rajatkalsotra/">Rajat Kalsotra</a></h4>
+             <div class="container"><p class="description">Web Developer| Web Scraping </p></div>
+             
+           </div>
+         </div>
+         <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+           <div class="box">
+             <!--<div class="icon" style="background: #FFFFFF;">--><img src="/img/1.jpg" class = "tent" width = "150px" height="150px"><!--</div>-->
+             <h4 class="title"><a href="">Aditya Raman</a></h4>
+             <p class="description">Data Science Enthusiast || Former Full Stack Developer Intern || Volunteer at UNV Online</p>
+           </div>
+         </div>
+
+         <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
+           <div class="box">
+             <!--<div class="icon" style="background: #FFFFFF;">--><img src="/img/0.jpg" class = "tent" width = "150px" height="150px"><!--</div>-->
+             <h4 class="title"><a href="https://www.linkedin.com/in/arsh-deep-60140816a/">Arshdeep Kashyap</a></h4>
+             <p class="description">Django|Machine Learning</p>
+           </div>
+         </div>
+         <!--<div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
+           <div class="box">
+             <div class="icon" style="background: #FFFFFF;"><img src="/img/testimonial-1.jpg" class = "tent" width = "150px" height="150px"></div>
+             <h4 class="title"><a href="https://www.linkedin.com/in/ramanaditya/">An active group</a></h4>
+             <p class="description">The community has been active for quite a long time now, taking the name of the college and FSMK ahead.</p>
+           </div>
+         </div>-->
+
+       </div>
+
+     </div>
+   </section><!-- #services -->
+<% include ./partial/footer %>

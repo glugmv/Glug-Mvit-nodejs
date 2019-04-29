@@ -1,0 +1,14 @@
+.jumbotron{
+      margin: 120px auto;
+      width:48vw;
+          box-shadow: 0 0 20px 2px #e5e5e5;
+    border-radius: 20px;
+}
+
+.cent{
+  text-align: center;
+  margin:0 auto;
+}
+.tent{
+  border-radius:100px;
+}

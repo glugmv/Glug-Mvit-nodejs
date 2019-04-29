@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>GLUG Mvit</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
+  <link href="/img/logo.png" rel="icon">
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/app.css" rel="stylesheet">
+  <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+</head>
+
+<body>
+  <!--==========================
+  Header
+  ============================-->
+  <header id="header">
+
+    <div id="topbar">
+      <div class="container">
+        <div class="social-links">
+          <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+          <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+          <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+          <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="logo float-left">
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <h1 class="text-light"><a href="/" class="scrollto"><img src="/img/logo.png" alt="" class="img-fluid"><span>GLUG MVIT</span></a></h1>
+        <a href="#header" class="scrollto"></a>
+      </div>
+
+      <nav class="main-nav float-right d-none d-lg-block">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <% if(!user){ %>
+              <li class="active">
+                    <a href="/login">Login</a>
+              </li>
+              <li>
+                    <a href="/register">Signup</a>
+              </li>
+          <% }else{ %>
+           <!--  <li>
+                  <a class="disabled" href="#">Signed in as <%= user.username %></a>
+            </li> -->
+            <li>
+                  <a href="/logout">Logout</a>
+            </li>
+          <% } %>
+          <!-- <li><a href="../login">Login</a></li>
+          <li><a href="../register">Sign up</a></li> -->
+        </ul>
+      </nav><!-- .main-nav -->
+      <br><br><br>
+        
+    </div>
+
+  </header>
+<br><br><br>
+
+    <div id="contact" class="paddsection">
+      <div class="container">
+        <div class="contact-block1">
+            <div class="jumbotron">
+                <div class="container">
+                    <h2 class="mb-30">SIGN IN</h2>
+                    <form action="/login" method="POST" role="form" class="contactForm">
+                      <div class="row">
+                        
+                        <div class="col-lg-11">
+                          <div class="form-group contact-block1">
+                            <input type="email" name="email" class="form-control" id="name" placeholder="Your Email*" required="required" />
+                            </div>  
+                        </div>
+                       
+                        <div class="col-lg-11">
+                          <div class="form-group contact-block1">
+                            <input type="password" name="password" class="form-control" id="name" placeholder="PASSWORD*" required="required"/>     
+                          </div>
+                        </div>
+                        
+                        <div class="col-lg-5">
+                          <input type="submit" class="btn btn-primary" value="Submit">
+                          
+                        </div>
+                      </div>
+                    </form>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<% include ./partial/footer %>
